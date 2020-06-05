@@ -1,8 +1,11 @@
 import os
 import shutil
+import datetime
 print("Py-DOS 1.6\nCopyright 2020 ccc814p\n")
 home = os.getcwd()
 while True:
+  today = datetime.today()
+  now = datetime.now()
   cmd = input(os.getcwd() + ">")
   cmd = cmd.split()
   if cmd[0] == 'echo':
@@ -31,7 +34,7 @@ while True:
   if cmd[0] == 'java':
     os.system(f"java {cmd[1]}")
   if cmd[0] == 'help':
-    print("\nstart: starts a program)\necho: echos the following text\ndir: shows all files in a directory\ndel: deletes a file\nopen: shows contents of a file\nmakedir: creates the following directory inside the current directory\ncd: changes directory to the following dir\nddir: deletes the following dir\nrename: renames a file or directory\nclone: clones a file or directory to a certain dir\njava: runs a java program\nmove: moves a file to a requested directory\npython3: starts a python 3 program\ndate: shows current date\ntime: shows current time\nsetDate: sets date to the following. Format is 'year, month, day'\nexit: exits Py-DOS")
+    print("\nstart: starts a program\necho: echos the following text\ndir: shows all files in a directory\ndel: deletes a file\nopen: shows contents of a file\nmakedir: creates the following directory inside the current directory\ncd: changes directory to the following dir\nddir: deletes the following dir\nrename: renames a file or directory\nclone: clones a file or directory to a certain dir\njava: runs a java program\nmove: moves a file to a requested directory\npython3: starts a python 3 program\ndate: shows current date\ntime: shows current time\nsetDate: sets date to the following. Format is 'year, month, day'\nexit: exits Py-DOS")
   if cmd[0] == 'rename':
     os.rename(cmd[1], cmd[2])
   if cmd[0] == 'clone':
